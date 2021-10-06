@@ -1,0 +1,138 @@
+@use "../../../../styles" as *;
+
+.dropdownSection {
+  padding: 40px 0;
+  min-height: calc(100vh - 100px);
+  display: flex;
+
+  @include maxWidth(767px) {
+    min-height: calc(100vh - 80px);
+  }
+
+  .dropdownSection__container {
+    // width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include maxWidth(991px) {
+      flex-direction: column;
+    }
+  }
+
+  .dropdownSection__formContainer {
+    position: relative;
+    width: 40%;
+
+    @include maxWidth(767px) {
+      width: 100%;
+    }
+  }
+
+  .dropdownSection__note {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: $secondColor;
+  }
+
+  .dropdownSection__formMsg {
+    margin-bottom: 20px;
+    color: red;
+    display: block;
+  }
+
+  .dropdownSection__form {
+    padding: 20px;
+    background: darken($mainColor, 10%);
+    border-radius: 10px;
+  }
+
+  .dropdownSection__formGroup {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+
+  .dropdown__formLabel {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .dropdown__formInput {
+    width: 100%;
+    outline: none;
+    border: 1px solid $mainColor;
+    background-color: lighten($mainColor, 20%);
+    color: $whiteColor;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: 0.3s ease;
+
+    &::placeholder {
+      color: $whiteColor;
+    }
+
+    &:focus {
+      background-color: darken($whiteColor, 15%);
+      border: 1px solid darken($whiteColor, 15%);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      color: $mainColor;
+
+      &::placeholder {
+        color: $mainColor;
+      }
+    }
+  }
+
+  .dropdownSection__formSubmit {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // width: calc(100% - 8px);
+    padding: 20px 0;
+    background-color: darken($mainColor, 10%);
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  .dropdownSection__dropdown {
+    width: 40%;
+    background-color: $darkMainColor15;
+    padding: 20px;
+    border-radius: 5px;
+    max-height: 600px;
+    overflow-y: auto;
+
+    @include maxWidth(991px) {
+      width: 70%;
+      max-height: none;
+    }
+
+    @include maxWidth(767px) {
+      width: 90%;
+    }
+  }
+
+  .dropdownSection__icons {
+    width: 40%;
+
+    @include maxWidth(991px) {
+      width: 60%;
+      margin-top: 30px;
+    }
+
+    @include maxWidth(991px) {
+      width: 85%;
+    }
+
+    .imageSlider {
+      width: 80%;
+      height: 200px;
+      margin: 0 auto;
+    }
+  }
+}

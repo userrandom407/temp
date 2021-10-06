@@ -1,0 +1,36 @@
+@use "../../styles" as *;
+
+.button {
+  border: 1px solid $mainColor;
+  outline: none;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  color: $whiteColor;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: $mainColor;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $whiteColor;
+    color: $mainColor;
+    border: 1px solid $darkMainColor20;
+  }
+
+  &.white {
+    background-color: $whiteColor;
+    color: $mainColor;
+    border: 1px solid $whiteColor;
+  }
+
+  &--outline {
+    @extend .button;
+    color: color(mainColor);
+    background-color: color(lightBg);
+
+    &:hover {
+      color: color(lightBg);
+      background-color: color(mainColor);
+    }
+  }
+}

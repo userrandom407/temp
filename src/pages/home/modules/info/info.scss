@@ -1,0 +1,46 @@
+@use "../../../../styles" as *;
+
+.homeInfo {
+  padding: 60px 0;
+  // background-color: darken($secondColor, 39%);
+
+  .homeInfo__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .homeInfo__card {
+    width: 44%;
+    min-width: 250px;
+    border-radius: 5px;
+    padding: 20px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+  }
+
+  .homeInfo__cardImageDiv {
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .homeInfo__cardImg {
+    width: 100%;
+  }
+
+  .homeInfo__cardHeader {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .homeInfo__cardParagraph {
+    text-align: center;
+  }
+
+  .homeInfo__cardBtn {
+    text-align: center;
+    margin: 30px 0;
+  }
+}

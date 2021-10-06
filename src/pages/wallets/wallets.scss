@@ -1,0 +1,62 @@
+@use "../../styles" as *;
+
+.wallets {
+  min-height: calc(100vh - 60px);
+  height: fit-content;
+  background-color: $mainColor;
+  padding: 60px 0;
+  background-image: linear-gradient($mainColor80, darken($secondColor, 50%)),
+    url("../../assets/bg.jpg");
+
+  .wallets__body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    @include maxWidth(767px) {
+      flex-direction: column;
+    }
+  }
+
+  .wallets__icons {
+    width: 34%;
+    display: flex;
+
+    @include maxWidth(767px) {
+      width: 100%;
+      display: none;
+    }
+  }
+
+  .wallets__iconContainer {
+    margin: auto;
+
+    img {
+      margin: 20px;
+    }
+  }
+
+  .wallets__wallets {
+    width: 62%;
+
+    @include maxWidth(767px) {
+      width: 100%;
+    }
+  }
+
+  .wallets__walletsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    // overflow-y: auto;
+    // max-height: 500px;
+
+    .button {
+      width: 47%;
+      margin-bottom: 10px;
+    }
+  }
+}

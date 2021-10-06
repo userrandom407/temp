@@ -1,0 +1,188 @@
+@use "../../../../styles" as *;
+
+.hero {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  padding: 30px 0;
+  background-image: linear-gradient($mainColor80, darken($secondColor, 50%)),
+    url("../../../../assets/bg.jpg");
+  background-size: cover;
+  background-position: 50% 0%;
+  position: relative;
+
+  .hero__header {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 4rem;
+    width: 70%;
+    text-align: center;
+    opacity: 0;
+    margin: 20px auto 50px;
+    animation: animateHeader 0.7s forwards ease-in;
+
+    @include maxWidth(767px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  @keyframes animateHeader {
+    0% {
+      opacity: 0;
+      transform: translateY(-70px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero__subHeader {
+    text-align: center;
+    width: 80%;
+    margin: 20px auto 0;
+    font-weight: 500;
+    opacity: 0;
+    font-size: 2rem;
+    animation: animateHeader 0.7s forwards ease-in;
+    animation-delay: 0.5s;
+
+    @include maxWidth(767px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .hero__paragraph {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: animateHeader 0.7s forwards ease-in;
+    animation-delay: 0.9s;
+    color: $secondColor;
+  }
+
+  .hero__scrollDown {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 85%;
+    opacity: 0;
+    left: 48.5%;
+    // transform: translateX(-50%);
+    animation: animateScroll 3s forwards ease-in;
+
+    @include maxWidth(767px) {
+      display: none;
+    }
+  }
+
+  @keyframes animateScroll {
+    0% {
+      opacity: 0;
+      transform: translateY(70px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero__scrollDownContainer {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid $whiteColor;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: animateScrollContainer infinite 3s ease-in;
+
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+
+  @keyframes animateScrollContainer {
+    0% {
+      transform: translateY(0);
+    }
+
+    35% {
+      transform: translateY(0);
+    }
+
+    45% {
+      transform: translateY(-10px);
+    }
+
+    65% {
+      transform: translateY(10px);
+    }
+
+    80% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .hero__paragraph {
+    font-size: 1.125rem;
+    line-height: 2;
+  }
+
+  .hero__info,
+  .hero__access {
+    width: 40%;
+
+    @include maxWidth(767px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .hero__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero__access {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    background-color: $mainColor90;
+    border-radius: 5px;
+  }
+
+  .hero__secondaryHeader {
+    margin-bottom: 15px;
+  }
+
+  .hero__btns {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: $darkMainColor15;
+
+    .button {
+      margin-bottom: 15px;
+    }
+  }
+
+  .hero__icons {
+    width: 100%;
+    margin-top: 15px;
+
+    .imageSlider {
+      width: 80%;
+      height: 200px;
+      margin: 0 auto;
+    }
+  }
+}

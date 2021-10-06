@@ -1,0 +1,6 @@
+@use "../../styles" as *;
+
+.home {
+  background-color: $mainColor;
+  background-color: darken($mainColor, 5%);
+}

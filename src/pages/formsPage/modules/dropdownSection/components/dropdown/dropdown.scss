@@ -1,0 +1,58 @@
+@use "../../../../../../styles" as *;
+
+.dropdown {
+  transition: 0.3s;
+
+  .dropdown__header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $whiteColor;
+    cursor: pointer;
+  }
+
+  .dropdown__headerIcon {
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown__formContainer {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .dropdown__formGroup {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+
+  .dropdown__formLabel {
+    padding: 0 15px;
+  }
+
+  .dropdown__formInput {
+    width: 100%;
+    outline: none;
+    border: 1px solid $mainColor;
+    background-color: darken($whiteColor, 15%);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: 0.3s ease;
+
+    &:focus {
+      background-color: $whiteColor;
+      border: 1px solid $orangeColor;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .dropdown__formMessage {
+    font-size: 0.8rem;
+  }
+}

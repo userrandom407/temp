@@ -1,0 +1,7 @@
+@use "../../styles" as *;
+
+.formsPage {
+  background-color: $mainColor;
+  background-image: linear-gradient($mainColor80, darken($secondColor, 50%)),
+    url("../../assets/bg.jpg");
+}

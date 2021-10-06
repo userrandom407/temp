@@ -1,0 +1,11 @@
+@use "./variables" as *;
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.second {
+  color: $secondColor;
+}

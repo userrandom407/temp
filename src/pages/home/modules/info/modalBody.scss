@@ -1,0 +1,46 @@
+@use "../../../../styles" as *;
+
+.modalBody {
+  color: $mainColor;
+  border-radius: 10px;
+
+  .modalBody__container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .modalBody__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modalBody__icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      font-size: 1.4rem;
+    }
+  }
+
+  .modalBody__options {
+    margin: 25px 0;
+  }
+
+  .modalBody__btnDiv {
+    display: flex;
+    margin-bottom: 15px;
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  .modalBody__note {
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+}

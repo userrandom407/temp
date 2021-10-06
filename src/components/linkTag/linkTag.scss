@@ -1,0 +1,43 @@
+@use "../../styles" as *;
+
+.linkTag {
+  text-decoration: none;
+  color: color(textColor);
+  font-weight: 400;
+  transition: 0.3s;
+
+  &:hover {
+    color: color(mainColor);
+  }
+
+  &.btn {
+    border: 1px solid color(mainColor);
+    outline: none;
+    padding: 0.7rem 2.5rem;
+    border-radius: 30px;
+    color: $mainColor;
+    cursor: pointer;
+    background-color: $whiteColor;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+
+    &:hover {
+      // background-color: darken(color(mainColor), 20%);
+      color: color(lightBg);
+      // border: 1px solid darken(color(mainColor), 20%);
+    }
+  }
+
+  &.outline {
+    @extend .btn;
+
+    color: color(whiteColor);
+    background-color: transparent;
+    border: 1px solid color(whiteColor);
+
+    &:hover {
+      color: color(mainColor);
+      background-color: transparent;
+    }
+  }
+}

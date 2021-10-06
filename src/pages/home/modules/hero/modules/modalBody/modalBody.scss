@@ -1,0 +1,33 @@
+@use "../../../../../../styles" as *;
+
+.modalBody {
+  position: relative;
+
+  .modalBody__header {
+    text-align: center;
+    color: $mainColor;
+  }
+
+  .modalBody__wallets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .button {
+      margin: 15px 0;
+
+      @include maxWidth(575px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .modalBody__closeIcon {
+    position: absolute;
+    top: -25px;
+    right: -22px;
+    color: $orangeColor;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
